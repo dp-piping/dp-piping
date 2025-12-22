@@ -8,13 +8,12 @@ import Title from "../../shared/Title.astro";
 import LazyImage from "../../shared/LazyImage.astro";
 
 const heroSection = {
-  headline1: "Built ",
-  headline2: "strong.",
-  headline3: "Done",
-  headline4: "right.",
-  subheading1: "With years of hands-on experience,",
-  subheading2: "we take pride in delivering",
-  subheading3: "quality workmanship, honest advice, and reliable results.",
+  headline1: "Residential",
+  headline2: "and",
+  headline3: "Commercial",
+  headline4: "Plumbing Services",
+  subheading1: "Built strong.",
+  subheading2: "Done right.",
   buttonText: "Get Started Today!",
   backgroundImage: "IMG_3657.JPG",
 };
@@ -33,18 +32,19 @@ const { className = "" } = Astro.props;
     >
       <div class="justify-center flex flex-col text-center md:ml-auto">
         <Title className="">
-          {heroSection.headline1}
-          <GradiantText
-            >{" " + heroSection.headline2}
-            <br />
-            {" " + heroSection.headline3}
-          </GradiantText>{heroSection.headline4}
+          <GradiantText>
+            {heroSection.headline1}
+          </GradiantText>
+          {heroSection.headline2}
+          <GradiantText>
+            {heroSection.headline3}
+          </GradiantText>
+          {heroSection.headline4}
         </Title>
         <SubTitle className=" mt-10 leading-9 italic">
           {heroSection.subheading1}
           <br />
-          {heroSection.subheading2}<br />
-          {heroSection.subheading3}
+          {heroSection.subheading2}
         </SubTitle>
         <div class="pt-10">
           <CtaButton>{heroSection.buttonText}</CtaButton>

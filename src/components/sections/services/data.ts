@@ -1,4 +1,4 @@
-import img1 from "./assets/solar3.png";
+import img1 from "./assets/GAIB0596.JPG";
 import img2 from "./assets/wind.png";
 // TODO
 import img3 from "./assets/hydro.png";
@@ -8,18 +8,18 @@ import img5 from "./assets/smart-grid.png";
 import img6 from "./assets/green.png";
 
 export const servicesSectionData = {
-  title: "Our Sustainable Energy Solutions",
+  title: "Our Services",
   subheading: {
-    text1_1: "Experience a Revolution in Energy Solutions - ",
+    text1_1: "We are a full-service mechanical contractor specializing in the installation and servicing of heating systems and compressed air solutions.",
     text1_2: "Embrace Innovation, Embrace Sustainability.",
     text2:
-      "We're here to Empower Your Life and Spaces with Clean, Renewable Energy, Paving the Way for a Brighter and Greener Tomorrow.",
+      "From small shops and houses to full industrial and commercial facilities, we handle complete air compressor and piping systems from start to finish.",
   },
   services: [
     {
-      title: "Solar Power Solutions",
+      title: "Water Heaters",
       briefDescription:
-        "Harness the power of the sun with our state-of-the-art solar panels. Generate clean energy for your home or business and reduce your carbon footprint.",
+        "",
       visual: img1,
     },
     {
