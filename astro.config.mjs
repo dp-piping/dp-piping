@@ -1,17 +1,10 @@
-// @ts-check
-
-import mdx from '@astrojs/mdx';
-import sitemap from '@astrojs/sitemap';
-import { defineConfig } from 'astro/config';
-
-import tailwindcss from '@tailwindcss/vite';
+import { defineConfig } from "astro/config";
+import tailwind from "@astrojs/tailwind";
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://dppiping.com',
-  integrations: [mdx(), sitemap()],
-  output: 'static',
-  vite: {
-    plugins: [tailwindcss()],
-  },
+  integrations: [tailwind()],
+  site: "https://dppiping.com",
+  output: "static",
+  trailingSlash: "ignore",
 });
