@@ -1,4 +1,4 @@
-import img1 from "./assets/GAIB0596.JPG";
+import img1 from "./assets/GAIB0596.jpg";
 import img2 from "./assets/wind.png";
 // TODO
 import img3 from "./assets/hydro.png";
