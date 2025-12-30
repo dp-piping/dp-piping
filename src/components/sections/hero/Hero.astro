@@ -30,15 +30,15 @@ const { className = "" } = Astro.props;
       class="w-full h-full grid grid-cols-1 md:grid-cols-2 justify-end bg-base-100 dark:bg-base-dark-900"
     >
       <div class="justify-center flex flex-col text-center md:ml-auto">
-        <Title className="">
+        <Title className="lg:text-6xl text-3xl">
           <GradiantText>
             {heroSection.title1}
           </GradiantText>
         </Title>
-        <Title className="text-4xl">
+        <Title className="lg:text-4xl text-xl">
             {heroSection.title2}
         </Title>
-        <Title3 className=" mt-10 leading-9 italic">
+        <Title3 className="lg:text-2xl text-l leading-9 italic">
             {heroSection.title3}
         </Title3>
         <div class="pt-10">
