@@ -11,7 +11,8 @@ import LazyImage from "../../shared/LazyImage.astro";
 
 const heroSection = {
   title1: "D.P. Piping",
-  title2: "Rhode Island's Premier Residential and Commercial Plumbing Services Provider",
+  title2:
+    "Rhode Island's Premier Residential and Commercial Plumbing Services Provider",
   title3: "Built strong. Done right.",
   buttonText: "Call or Email to Get Started Today!",
   backgroundImage: "IMG_3657.jpg",
@@ -36,13 +37,15 @@ const { className = "" } = Astro.props;
           </GradiantText>
         </Title>
         <Title className="lg:text-4xl text-xl">
-            {heroSection.title2}
+          {heroSection.title2}
         </Title>
         <Title3 className="lg:text-2xl text-l leading-9 italic">
-            {heroSection.title3}
+          {heroSection.title3}
         </Title3>
-        <div class="pt-10">
-          <CtaButton>{heroSection.buttonText}</CtaButton>
+        <div get-started data-open-nav="false" class="pt-10">
+          <CtaButton
+            >{heroSection.buttonText}</CtaButton
+          >
         </div>
       </div>
       <div class="flex relative pt-10 md:p-0">
@@ -61,4 +64,42 @@ const { className = "" } = Astro.props;
       </div>
     </div>
   </div>
+  <script>
+    const navbar = document.querySelector("[data-navbar]") as HTMLDivElement;
+    const overlayNav = document.querySelector(
+      "[data-nav-overlay]",
+    ) as HTMLDivElement;
+    const getStartedButton = document.querySelector("[get-started]") as HTMLDivElement;
+    alert(getStartedButton)
+    if (getStartedButton) {
+      getStartedButton.addEventListener("click", (e) => {
+        e.preventDefault();
+        if (getStartedButton.getAttribute("data-open-nav") === "false") {
+          getStartedButton.setAttribute("data-open-nav", "true");
+          overlayNav.setAttribute("data-is-visible", "true");
+          document.body.classList.add("!overflow-y-hidden");
+          navbar.style.height = `${navbar.scrollHeight}px`;
+        } else {
+          getStartedButton.setAttribute("data-open-nav", "false");
+          overlayNav.setAttribute("data-is-visible", "false");
+          document.body.classList.remove("!overflow-y-hidden");
+          navbar.style.height = "0px";
+        }
+      });
+
+      navbar.addEventListener("click", () => {
+        getStartedButton.setAttribute("data-open-nav", "false");
+        overlayNav.setAttribute("data-is-visible", "false");
+        document.body.classList.remove("!overflow-y-hidden");
+        navbar.style.height = "0px";
+      });
+
+      overlayNav.addEventListener("click", () => {
+        getStartedButton.setAttribute("data-open-nav", "false");
+        overlayNav.setAttribute("data-is-visible", "false");
+        document.body.classList.remove("!overflow-y-hidden");
+        navbar.style.height = "0px";
+      });
+    }
+  </script>
 </section>
