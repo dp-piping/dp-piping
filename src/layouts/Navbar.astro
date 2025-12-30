@@ -3,6 +3,7 @@ import Container from "../components/shared/Container.astro";
 import Navitem from "../components/shared/Navitem.astro";
 import BtnLink from "../components/shared/BtnLink.astro";
 import BtnThemeSwitch from "../components/shared/BtnThemeSwitch.astro";
+import Logo from "../assets/dppiping_logo.svg";
 
 const navItems = [
   {
@@ -43,8 +44,8 @@ const navItems = [
     <div class="min-w-max inline-flex relative">
       <!-- LOGO -->
       <a href="/" class="relative flex items-center gap-3">
-        <div class="relative h-7 overflow-hidden flex rounded-xl">
-          LOGO PlACEholder 
+        <div class="relative w-32 overflow-hidden flex rounded-xl">
+          <img src={Logo.src} alt="D.P. Piping"/>
         </div>
       </a>
     </div>
@@ -74,16 +75,16 @@ const navItems = [
       >
         <BtnLink
           text="Get Started"
-          href="#cta"
+          href="#secondary"
           className="flex justify-center w-full sm:w-max text-lg text-heading-2"
-          variant="cta"
+          variant="secondary"
         />
       </div>
     </div>
 
     <div class="min-w-max flex items-center gap-x-3">
       <!-- Theme Switch -->
-      <BtnThemeSwitch variant="primary" />
+      <!-- <BtnThemeSwitch variant="primary" /> -->
 
       <!-- Navbar toggle -->
       <button

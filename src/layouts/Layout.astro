@@ -67,17 +67,21 @@ const { title } = Astro.props;
     }
 
     function detectSystemTheme(manual = false) {
-      if (
-        localStorage.getItem("theme") === "dark" ||
-        (!("theme" in localStorage) &&
-          window.matchMedia("(prefers-color-scheme: dark)").matches)
-      ) {
-        document.documentElement.classList.add("dark");
-        if (manual) localStorage.setItem("theme", "dark");
-      } else {
+        // Just make it light
         document.documentElement.classList.remove("dark");
         if (manual) localStorage.setItem("theme", "light");
-      }
+
+      // if (
+      //   localStorage.getItem("theme") === "dark" ||
+      //   (!("theme" in localStorage) &&
+      //     window.matchMedia("(prefers-color-scheme: dark)").matches)
+      // ) {
+      //   document.documentElement.classList.add("dark");
+      //   if (manual) localStorage.setItem("theme", "dark");
+      // } else {
+      //   document.documentElement.classList.remove("dark");
+      //   if (manual) localStorage.setItem("theme", "light");
+      // }
     }
 
     function changeThemeToDark() {
