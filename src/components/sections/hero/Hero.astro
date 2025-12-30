@@ -70,7 +70,6 @@ const { className = "" } = Astro.props;
       "[data-nav-overlay]",
     ) as HTMLDivElement;
     const getStartedButton = document.querySelector("[get-started]") as HTMLDivElement;
-    alert(getStartedButton)
     if (getStartedButton) {
       getStartedButton.addEventListener("click", (e) => {
         e.preventDefault();
