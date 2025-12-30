@@ -11,7 +11,7 @@ import LazyImage from "../../shared/LazyImage.astro";
 
 const heroSection = {
   title1: "D.P. Piping",
-  title2: "Residential and Commercial Plumbing Services",
+  title2: "Rhode Island's Premier Residential and Commercial Plumbing Services Provider",
   title3: "Built strong. Done right.",
   buttonText: "Call or Email to Get Started Today!",
   backgroundImage: "IMG_3657.jpg",
@@ -24,8 +24,8 @@ export interface Props {
 const { className = "" } = Astro.props;
 ---
 
-<section class=`relative  ${className} w-full h-[80vh]` id="hero">
-  <div class="w-full h-[80vh] pt-[100px]">
+<section class=`relative  ${className} h-auto md:h-screen` id="hero">
+  <div class="h-auto md:h-screen pt-[100px]">
     <div
       class="w-full h-full grid grid-cols-1 md:grid-cols-2 justify-end bg-base-100 dark:bg-base-dark-900"
     >
