@@ -6,34 +6,34 @@ import BtnThemeSwitch from "../components/shared/BtnThemeSwitch.astro";
 import Logo from "../assets/dppiping_logo.svg";
 
 const navItems = [
-  {
-    href: "#",
-    text: "Home",
-  },
+  // {
+  //   href: "#",
+  //   text: "Home",
+  // },
   // {
   //   href: "#hero",
   //   text: "Hero",
   // },
-  {
-    href: "#services",
-    text: "Services",
-  },
-  {
-    href: "#innovations",
-    text: "Innovations",
-  },
-  {
-    href: "#testimonials",
-    text: "Testimonials",
-  },
-  {
-    href: "#environment",
-    text: "Environment",
-  },
-  {
-    href: "#projects",
-    text: "Projects",
-  },
+  // {
+  //   href: "#services",
+  //   text: "Services",
+  // },
+  // {
+  //   href: "#innovations",
+  //   text: "Innovations",
+  // },
+  // {
+  //   href: "#testimonials",
+  //   text: "Testimonials",
+  // },
+  // {
+  //   href: "#environment",
+  //   text: "Environment",
+  // },
+  // {
+  //   href: "#projects",
+  //   text: "Projects",
+  // },
 ];
 ---
 
@@ -68,18 +68,28 @@ const navItems = [
             return <Navitem {...item} />;
           })
         }
-      </ul>
 
-      <div
+      <!-- <div
         class="lg:min-w-max flex items-center sm:w-max w-full pb-6 lg:pb-0 border-b border-box-bg lg:border-0 px-6 lg:px-0"
-      >
-        <BtnLink
-          text="Get Started"
-          href="#secondary"
-          className="flex justify-center w-full sm:w-max text-lg text-heading-2"
-          variant="secondary"
-        />
-      </div>
+      > -->
+      <li>
+      <BtnLink
+        text="✉ Email"
+        href="mailto:derek@dppiping.com"
+        className="flex justify-center w-full sm:w-max text-lg text-heading-2 mr-6"
+        variant="secondary"
+      />
+      </li>
+      <li>
+      <BtnLink
+        text="📞 Phone"
+        href="tel:+4014251778"
+        className="flex justify-center w-full sm:w-max text-lg text-heading-2"
+        variant="secondary"
+      />
+      </li>
+    </ul>
+      <!-- </div> -->
     </div>
 
     <div class="min-w-max flex items-center gap-x-3">
