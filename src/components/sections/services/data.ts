@@ -1,11 +1,11 @@
 import img1 from "./assets/GAIB0596.jpg";
-import img2 from "./assets/wind.png";
+import img2 from "./assets/IMG_0007.jpg";
 // TODO
-import img3 from "./assets/hydro.png";
-import img4 from "./assets/storage.png";
+import img3 from "./assets/IMG_0105.jpg";
+import img4 from "./assets/IMG_0107.jpg";
 // TODO
-import img5 from "./assets/smart-grid.png";
-import img6 from "./assets/green.png";
+import img5 from "./assets/IMG_0371.jpg";
+import img6 from "./assets/IMG_0389.png";
 
 export const servicesSectionData = {
   title: "Our Services",
@@ -17,43 +17,43 @@ export const servicesSectionData = {
   },
   services: [
     {
-      title: "Water Heaters",
+      title: "",
       briefDescription:
         "",
       visual: img1,
     },
     {
-      title: "Wind Energy Harvesting",
+      title: "",
       briefDescription:
-        "Embrace the power of the wind. Our wind energy solutions provide a sustainable and efficient way to generate electricity, ensuring a greener future.",
+        "",
       visual: img2,
     },
     {
-      title: "Hydropower Systems",
+      title: "",
       briefDescription:
-        "Flow with nature. Our hydropower systems harness the energy of flowing water, delivering reliable and eco-friendly electricity to your doorstep.",
+        "",
       visual: img3,
     },
     {
-      title: "Energy Storage Solutions",
+      title: "",
       briefDescription:
-        "Store excess energy efficiently. Our cutting-edge energy storage solutions ensure uninterrupted power supply, even during cloudy days or low-wind periods.",
+        "",
       visual: img4,
     },
     {
-      title: "Smart Grid Technology",
+      title: "",
       briefDescription:
-        "Navigate the future with our smart grid technology. Optimize energy distribution, monitor consumption, and contribute to a more sustainable and efficient energy ecosystem.",
+        "",
       visual: img5,
     },
     {
-      title: "Energy-efficient Lighting",
+      title: "",
       briefDescription:
-        "Illuminate your space responsibly. Our energy-efficient lighting solutions provide bright, sustainable, and cost-effective illumination for homes and businesses.",
+        "",
       visual: img6,
     },
   ],
   callToAction:
-    "Discover the Future of Green Energy. Choose Your Sustainable Solution Today!",
+    "Call us for your plumbing needs today!",
   buttonText: "Explore More",
 };

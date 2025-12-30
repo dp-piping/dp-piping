@@ -27,6 +27,6 @@ export const innovationsSection = {
     },
   ],
   visual: "innovations-section-image.jpg",
-  callToAction: "Explore the Future of Green Energy with [Company Name]",
+  callToAction: "Explore the Future of Green Energy with D.P. Piping",
   button: "Learn More",
 };
