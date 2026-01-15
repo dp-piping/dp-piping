@@ -22,10 +22,10 @@
     "prettier-plugin-astro": "^0.14.1"
   },
   "engines": {
-    "node": "20"
+    "node": "24"
   },
-  "node": "20.11.0",
+  "node": "24",
   "volta": {
-    "node": "20.11.0"
+    "node": "24"
   }
 }

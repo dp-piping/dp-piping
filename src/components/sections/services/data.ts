@@ -8,12 +8,12 @@ import img5 from "./assets/IMG_0371.jpg";
 import img6 from "./assets/IMG_0389.png";
 
 export const servicesSectionData = {
-  title: "Our Services",
+  title: "About Us",
   subheading: {
-    text1_1: "We are a full-service mechanical contractor specializing in the installation and servicing of heating systems and compressed air solutions.",
+    text1_1: "We are a fully licensed and insured mechanical contractor specializing in the installation, servicing, and inspections of heating and cooling systems and compressed air solutions.",
     text1_2: "Embrace Innovation, Embrace Sustainability.",
     text2:
-      "From small shops and houses to full industrial and commercial facilities, we handle complete air compressor and piping systems from start to finish.",
+      "With years of hands-on experience, we take pride in delivering quality workmanship, honest advice, and reliable results.",
   },
   services: [
     {

@@ -10,9 +10,9 @@ import Title3 from "../../shared/Title3.astro";
 import LazyImage from "../../shared/LazyImage.astro";
 
 const heroSection = {
-  title1: "D.P. Piping",
+  title1: "Mechanical Services & Heating and Cooling Installation",
   title2:
-    "Rhode Island's Premier Residential and Commercial Plumbing Services Provider",
+    "Air Compressor Systems & Air Piping Installation",
   title3: "Built strong. Done right.",
   buttonText: "Call or Email to Get Started Today!",
   backgroundImage: "IMG_3657.jpg",
@@ -30,11 +30,9 @@ const { className = "" } = Astro.props;
     <div
       class="w-full h-full grid grid-cols-1 md:grid-cols-2 justify-end bg-base-100 dark:bg-base-dark-900"
     >
-      <div class="justify-center flex flex-col text-center md:ml-auto">
-        <Title className="lg:text-6xl text-3xl">
-          <GradiantText>
+      <div class="justify-center flex flex-col text-center mt-4 md:mt-0 md:ml-auto">
+        <Title className="lg:text-4xl text-xl">
             {heroSection.title1}
-          </GradiantText>
         </Title>
         <Title className="lg:text-4xl text-xl">
           {heroSection.title2}

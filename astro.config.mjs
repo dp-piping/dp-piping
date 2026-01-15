@@ -7,4 +7,9 @@ export default defineConfig({
   site: "https://dppiping.com",
   output: "static",
   trailingSlash: "ignore",
+  vite: {
+    server: {
+      hmr: true
+    },
+  },
 });
