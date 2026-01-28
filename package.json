@@ -1,31 +1,20 @@
 {
   "name": "dp-piping",
+  "private": true,
+  "version": "0.0.0",
   "type": "module",
-  "version": "0.0.2",
   "scripts": {
-    "dev": "astro dev --host",
-    "start": "astro dev",
-    "build": "astro check && astro build",
-    "preview": "astro preview",
-    "astro": "astro"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
   "dependencies": {
-    "@astrojs/check": "^0.9.6",
-    "@astrojs/rss": "^4.0.14",
-    "@astrojs/tailwind": "^6.0.2",
-    "astro": "^5.16.6",
-    "tailwindcss": "^3.4.1",
-    "typescript": "^5.3.3"
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-icons": "^5.5.0"
   },
   "devDependencies": {
-    "prettier": "^3.6.2",
-    "prettier-plugin-astro": "^0.14.1"
-  },
-  "engines": {
-    "node": "24"
-  },
-  "node": "24",
-  "volta": {
-    "node": "24"
+    "@vitejs/plugin-react": "^4.2.0",
+    "vite": "^5.0.0"
   }
 }
