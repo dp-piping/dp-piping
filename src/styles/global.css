@@ -1,155 +1,505 @@
-/*
-  The CSS in this style tag is based off of Bear Blog's default CSS.
-  https://github.com/HermanMartinus/bearblog/blob/297026a877bc2ab2b3bdfbd6b9f7961c350917dd/templates/styles/blog/default.css
-  License MIT: https://github.com/HermanMartinus/bearblog/blob/master/LICENSE.md
- */
-
 :root {
-	--accent: #2337ff;
-	--accent-dark: #000d8a;
-	--black: 15, 18, 25;
-	--gray: 96, 115, 159;
-	--gray-light: 229, 233, 240;
-	--gray-dark: 34, 41, 57;
-	--gray-gradient: rgba(var(--gray-light), 50%), #fff;
-	--box-shadow:
-		0 2px 6px rgba(var(--gray), 25%), 0 8px 24px rgba(var(--gray), 33%), 0 16px 32px
-		rgba(var(--gray), 33%);
-}
-@font-face {
-	font-family: "Atkinson";
-	src: url("/fonts/atkinson-regular.woff") format("woff");
-	font-weight: 400;
-	font-style: normal;
-	font-display: swap;
-}
-@font-face {
-	font-family: "Atkinson";
-	src: url("/fonts/atkinson-bold.woff") format("woff");
-	font-weight: 700;
-	font-style: normal;
-	font-display: swap;
-}
-body {
-	font-family: "Atkinson", sans-serif;
-	margin: 0;
-	padding: 0;
-	text-align: left;
-	background: linear-gradient(var(--gray-gradient)) no-repeat;
-	background-size: 100% 600px;
-	word-wrap: break-word;
-	overflow-wrap: break-word;
-	color: rgb(var(--gray-dark));
-	font-size: 20px;
-	line-height: 1.7;
-}
-main {
-	width: 720px;
-	max-width: calc(100% - 2em);
-	margin: auto;
-	padding: 3em 1em;
-}
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-	margin: 0 0 0.5rem 0;
-	color: rgb(var(--black));
-	line-height: 1.2;
-}
-h1 {
-	font-size: 3.052em;
-}
-h2 {
-	font-size: 2.441em;
-}
-h3 {
-	font-size: 1.953em;
-}
-h4 {
-	font-size: 1.563em;
-}
-h5 {
-	font-size: 1.25em;
-}
-strong,
-b {
-	font-weight: 700;
-}
-a {
-	color: var(--accent);
-}
-a:hover {
-	color: var(--accent);
-}
-p {
-	margin-bottom: 1em;
-}
-.prose p {
-	margin-bottom: 2em;
-}
-textarea {
-	width: 100%;
-	font-size: 16px;
-}
-input {
-	font-size: 16px;
-}
-table {
-	width: 100%;
-}
-img {
-	max-width: 100%;
-	height: auto;
-	border-radius: 8px;
-}
-code {
-	padding: 2px 5px;
-	background-color: rgb(var(--gray-light));
-	border-radius: 2px;
-}
-pre {
-	padding: 1.5em;
-	border-radius: 8px;
-}
-pre > code {
-	all: unset;
-}
-blockquote {
-	border-left: 4px solid var(--accent);
-	padding: 0 0 0 20px;
-	margin: 0;
-	font-size: 1.333em;
-}
-hr {
-	border: none;
-	border-top: 1px solid rgb(var(--gray-light));
-}
-@media (max-width: 720px) {
-	body {
-		font-size: 18px;
-	}
-	main {
-		padding: 1em;
-	}
+    --color-primary: #0f172a;
+    --color-accent: #2563eb;
+    --color-muted: #64748b;
+    --color-bg: #ffffff;
 }
 
-.sr-only {
-	border: 0;
-	padding: 0;
-	margin: 0;
-	position: absolute !important;
-	height: 1px;
-	width: 1px;
-	overflow: hidden;
-	/* IE6, IE7 - a 0 height clip, off to the bottom right of the visible 1px box */
-	clip: rect(1px 1px 1px 1px);
-	/* maybe deprecated but we need to support legacy browsers */
-	clip: rect(1px, 1px, 1px, 1px);
-	/* modern browsers, clip-path works inwards from each corner */
-	clip-path: inset(50%);
-	/* added line to stop words getting smushed together (as they go onto separate lines and some screen readers do not understand line feeds as a space */
-	white-space: nowrap;
+/* ===== Reset / Global Styles ===== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background-color: var(--color-bg);
+    color: var(--color-primary);
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+section {
+    padding: 5rem 1.5rem;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.btn {
+    display: inline-block;
+    background-color: var(--color-accent);
+    color: white;
+    padding: 0.85rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    text-decoration: none;
+    margin-top: 1.25rem;
+}
+
+.btn:active {
+    transform: scale(0.98);
+}
+
+/* ================= Hero Section ================= */
+.hero {
+    background-color: #f8fafc;
+    padding: 2rem 1.5rem;
+}
+
+.hero-content-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    position: relative;
+    margin-bottom: 2rem; /* spacing below hero */
+}
+
+.hero-text {
+    text-align: center;
+}
+
+.hero-text h1 {
+    font-size: 2.75rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
+    color: var(--color-primary);
+}
+
+.hero-text h2 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--color-accent);
+    margin-bottom: 0.5rem;
+}
+
+.hero-location {
+    font-size: 0.95rem;
+    color: var(--color-muted);
+    margin-top: 0.25rem;
+    margin-bottom: 1rem;
+}
+
+.hero-slogan {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    margin-bottom: 1rem;
+}
+
+.hero-image {
+    position: relative;
+    width: 100%;
+    max-height: 400px;
+    border-radius: 0.75rem;
+    overflow: hidden;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+@media(min-width: 768px) {
+    .hero-content-wrapper {
+        flex-direction: row;
+        align-items: center;
+        gap: 3rem;
+    }
+
+    .hero-text {
+        flex: 1;
+        text-align: left;
+    }
+
+    .hero-image {
+        flex: 1;
+        max-height: 500px;
+    }
+
+    .hero-text h1 {
+        font-size: 3.5rem;
+    }
+
+    .hero-text h2 {
+        font-size: 2rem;
+    }
+
+    .hero-slogan {
+        font-size: 1.75rem;
+    }
+}
+
+/* ================= Service Section ================= */
+.section-title {
+    font-size: 1.75rem;
+    margin-bottom: 2rem;
+}
+
+.services-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    .services-grid {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 2rem;
+    }
+
+    .section-title {
+        font-size: 2.25rem;
+    }
+}
+
+/* ===== Service Card ===== */
+.service-card {
+    border: 1px solid #e5e7eb;
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.service-card h3 {
+    font-size: 1.25rem;
+    margin-top: 1rem;
+}
+
+.service-card p {
+    color: var(--color-muted);
+    font-size: 0.95rem;
+    margin-top: 0.5rem;
+}
+
+.service-image {
+    width: 100%;
+    height: 160px;
+    background-color: #e5e7eb;
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+.service-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Bulleted list in service card */
+.service-bullets {
+    list-style: disc inside;
+    margin-top: 0.75rem;
+    color: var(--color-muted);
+    font-size: 0.95rem;
+}
+
+.service-bullets li {
+    margin-bottom: 0.25rem;
+}
+
+/* ================= Wide Desktop Service Card ================= */
+@media(min-width: 1024px) {
+    .service-card {
+        flex-direction: row;
+        gap: 2rem;
+        align-items: center;
+    }
+
+    .service-card > .service-image {
+        order: 2; /* image to right */
+        flex: 0 0 40%;
+        height: 200px;
+    }
+
+    .service-card > h3,
+    .service-card > p,
+    .service-card > .service-bullets {
+        flex: 1;
+        order: 1; /* text stays left */
+    }
+}
+
+/* ================= Gallery ================= */
+.gallery-wrapper {
+    margin: 2.5rem 0;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+}
+
+.gallery-scroll {
+    display: flex;
+    gap: 1rem;
+}
+
+.gallery-item {
+    flex: 0 0 80%;
+    scroll-snap-align: start;
+    border-radius: 0.75rem;
+    overflow: hidden;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+@media (min-width: 768px) {
+    .gallery-scroll {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1.5rem;
+    }
+
+    .gallery-item img {
+        height: 160px;
+    }
+}
+
+/* ================= Trust Icons ================= */
+.trust-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 600;
+    color: var(--color-primary);
+    font-size: 1rem;
+}
+
+.trust-icon {
+    font-size: 1.5rem;
+}
+
+/* Hero spacing fix for trust icons */
+.about-trust {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.25rem;
+    margin: 2rem 0; /* spacing above and below */
+}
+
+@media (min-width: 768px) {
+    .about-trust {
+        flex-direction: row;
+        justify-content: center;
+        gap: 2.5rem;
+    }
+}
+
+/* ================= Footer ================= */
+.site-footer {
+    background-color: #0f172a;
+    color: #f1f5f9;
+    padding: 2rem 1.5rem;
+    text-align: center;
+}
+
+.site-footer a {
+    color: #2563eb;
+    margin: 0 0.5rem;
+    text-decoration: none;
+}
+
+.footer-top p {
+    margin: 0.25rem 0;
+}
+
+.footer-links,
+.footer-social {
+    margin: 1rem 0;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.footer-copy {
+    margin-top: 1rem;
+    font-size: 0.85rem;
+    color: #94a3b8;
+}
+
+/* ================= Contact Section ================= */
+.contact-section {
+    padding: 4rem 1.5rem;
+    background-color: #f1f5f9;
+    color: #0f172a;
+}
+
+.contact-content {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.contact-intro {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.contact-methods {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.contact-button {
+    display: block;
+    text-align: center;
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: white;
+}
+
+.contact-button.phone {
+    background-color: #2563eb;
+}
+
+.contact-button.email {
+    background-color: #10b981;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-top: 1rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    border: 1px solid #cbd5e1;
+    font-size: 0.95rem;
+}
+
+.submit-button {
+    padding: 0.75rem;
+    border: none;
+    border-radius: 0.5rem;
+    background-color: #2563eb;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.submit-button:hover {
+    background-color: #1e40af;
+}
+
+/* ================= Sticky Contact Button ================= */
+.sticky-contact {
+    position: fixed;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    background-color: #2563eb;
+    color: white;
+    padding: 0.75rem 1rem;
+    border-radius: 9999px;
+    font-weight: 600;
+    text-decoration: none;
+    z-index: 1000;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+    outline: none;
+    border: none;
+}
+
+.sticky-contact:hover {
+    background-color: #1e40af;
+}
+
+.sticky-contact:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+/* ================= Header ================= */
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    background-color: var(--color-bg);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    padding: 0.75rem 1.5rem;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.logo img {
+    height: 40px;
+    width: auto;
+}
+
+.company-name {
+    font-weight: 700;
+    font-size: 1.25rem;
+    color: var(--color-primary);
+}
+
+@media (max-width: 480px) {
+    .company-name {
+        font-size: 1rem;
+    }
+}
+
+/* ================= About Section ================= */
+.about {
+    background-color: #f1f5f9;
+    padding: 3rem 1.5rem;
+    color: var(--color-primary);
+}
+
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.about-content p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--color-primary);
 }
