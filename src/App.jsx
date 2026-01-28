@@ -4,12 +4,6 @@ import StickyContactButton from './components/StickyContactButton';
 import Hero from './sections/Hero';
 import About from './sections/About';
 import Services from './sections/Services';
-import ResidentialServices from './sections/ResidentialServices';
-import CommercialServices from './sections/CommercialServices';
-import IndustrialServices from './sections/IndustrialServices';
-import ResidentialGallery from './sections/ResidentialGallery';
-import CommercialGallery from './sections/CommercialGallery';
-import IndustrialGallery from './sections/IndustrialGallery';
 import Contact from './sections/Contact';
 
 function App() {
@@ -55,12 +49,6 @@ function App() {
       <Hero />
       <About />
       <Services />
-      <ResidentialServices />
-      <ResidentialGallery />
-      <CommercialServices />
-      <CommercialGallery />
-      <IndustrialServices />
-      <IndustrialGallery />
       <Contact />
       <StickyContactButton />
       <Footer />

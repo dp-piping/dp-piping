@@ -1,11 +1,18 @@
-import Gallery from '../components/Gallery'
+import Gallery from '../components/Gallery';
+
+// Import the images from your assets folder
+import res1 from '../assets/images/residential/residential1.png';
+import res2 from '../assets/images/residential/residential2.png';
+import res3 from '../assets/images/residential/residential3.png';
+import res4 from '../assets/images/residential/residential4.png';
 
 const residentialImages = [
-  { src: '/images/residential1.jpg', alt: 'Residential Heating Installation' },
-  { src: '/images/residential2.jpg', alt: 'Hot Water Tank Installation' },
-  { src: '/images/residential3.jpg', alt: 'Residential Plumbing Work' },
-]
+    { src: res2, alt: 'Hot Water Tank Installation' },
+    { src: res3, alt: 'Residential Plumbing Work' },
+    { src: res4, alt: 'Residential Plumbing Work' },
+    { src: res1, alt: 'Residential Heating Installation' },
+];
 
 export default function ResidentialGallery() {
-  return <Gallery images={residentialImages} />
+  return <Gallery images={residentialImages} />;
 }
