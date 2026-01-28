@@ -9,7 +9,7 @@ export default function Footer() {
         <div className="footer-top">
           <h3>D.P. Piping</h3>
           <p>Proudly serving all of Rhode Island</p>
-          <p>📞 (401)-425-1778 | ✉️ derek@dppiping.com</p>
+          <p>📞 (401) 425-1778 | ✉️ derek@dppiping.com</p>
           <p>Licensed & Insured</p>
         </div>
 
