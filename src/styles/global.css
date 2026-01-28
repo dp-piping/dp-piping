@@ -1,18 +1,18 @@
 :root {
-    --color-primary: #0f172a;
-    --color-accent: #2563eb;
-    --color-muted: #64748b;
+    --color-primary: #0f172a; /* deep navy */
+    --color-accent: #2563eb; /* steel blue */
+    --color-muted: #64748b; 
     --color-bg: #ffffff;
 }
 
-/* ===== Reset / Global Styles ===== */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-html, body {
+html,
+body {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     background-color: var(--color-bg);
     color: var(--color-primary);
@@ -48,7 +48,9 @@ section {
     transform: scale(0.98);
 }
 
-/* ================= Hero Section ================= */
+/* =========================
+   Hero Section
+========================= */
 .hero {
     background-color: #f8fafc;
     padding: 2rem 1.5rem;
@@ -60,7 +62,6 @@ section {
     align-items: center;
     gap: 2rem;
     position: relative;
-    margin-bottom: 2rem; /* spacing below hero */
 }
 
 .hero-text {
@@ -108,6 +109,7 @@ section {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    display: block;
 }
 
 .hero-overlay {
@@ -116,6 +118,27 @@ section {
     left: 0;
     width: 100%;
     height: 100%;
+    background: rgba(0, 0, 0, 0.25);
+}
+
+/* Hero & Trust icons spacing fix */
+.about-trust {
+    display: flex;
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+.about-trust .trust-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 600;
+    color: var(--color-primary);
+    font-size: 1rem;
+}
+
+.about-trust .trust-icon {
+    font-size: 1.5rem;
 }
 
 @media(min-width: 768px) {
@@ -146,9 +169,15 @@ section {
     .hero-slogan {
         font-size: 1.75rem;
     }
+
+    .about-trust {
+        justify-content: center;
+    }
 }
 
-/* ================= Service Section ================= */
+/* =========================
+   Services Section
+========================= */
 .section-title {
     font-size: 1.75rem;
     margin-bottom: 2rem;
@@ -157,22 +186,10 @@ section {
 .services-grid {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 2.5rem;
 }
 
-@media (min-width: 768px) {
-    .services-grid {
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
-        gap: 2rem;
-    }
-
-    .section-title {
-        font-size: 2.25rem;
-    }
-}
-
-/* ===== Service Card ===== */
+/* Service Card */
 .service-card {
     border: 1px solid #e5e7eb;
     border-radius: 0.75rem;
@@ -183,32 +200,21 @@ section {
     gap: 1rem;
 }
 
+.service-card > .service-text {
+    flex: 1;
+}
+
 .service-card h3 {
-    font-size: 1.25rem;
-    margin-top: 1rem;
+    margin-top: 0;
+    font-size: 1.5rem;
 }
 
 .service-card p {
+    margin-top: 0.5rem;
     color: var(--color-muted);
     font-size: 0.95rem;
-    margin-top: 0.5rem;
 }
 
-.service-image {
-    width: 100%;
-    height: 160px;
-    background-color: #e5e7eb;
-    border-radius: 0.5rem;
-    overflow: hidden;
-}
-
-.service-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-/* Bulleted list in service card */
 .service-bullets {
     list-style: disc inside;
     margin-top: 0.75rem;
@@ -220,29 +226,38 @@ section {
     margin-bottom: 0.25rem;
 }
 
-/* ================= Wide Desktop Service Card ================= */
+.service-image {
+    width: 100%;
+    height: 180px;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.service-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Wide screens: Service card row layout */
 @media(min-width: 1024px) {
     .service-card {
         flex-direction: row;
         gap: 2rem;
-        align-items: center;
+        align-items: flex-start;
     }
 
     .service-card > .service-image {
-        order: 2; /* image to right */
-        flex: 0 0 40%;
-        height: 200px;
-    }
-
-    .service-card > h3,
-    .service-card > p,
-    .service-card > .service-bullets {
         flex: 1;
-        order: 1; /* text stays left */
+        max-height: 300px;
     }
 }
 
-/* ================= Gallery ================= */
+/* =========================
+   Gallery
+========================= */
 .gallery-wrapper {
     margin: 2.5rem 0;
     overflow-x: auto;
@@ -269,7 +284,7 @@ section {
     display: block;
 }
 
-@media (min-width: 768px) {
+@media(min-width: 768px) {
     .gallery-scroll {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -281,74 +296,13 @@ section {
     }
 }
 
-/* ================= Trust Icons ================= */
-.trust-item {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    font-weight: 600;
-    color: var(--color-primary);
-    font-size: 1rem;
-}
-
-.trust-icon {
-    font-size: 1.5rem;
-}
-
-/* Hero spacing fix for trust icons */
-.about-trust {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1.25rem;
-    margin: 2rem 0; /* spacing above and below */
-}
-
-@media (min-width: 768px) {
-    .about-trust {
-        flex-direction: row;
-        justify-content: center;
-        gap: 2.5rem;
-    }
-}
-
-/* ================= Footer ================= */
-.site-footer {
-    background-color: #0f172a;
-    color: #f1f5f9;
-    padding: 2rem 1.5rem;
-    text-align: center;
-}
-
-.site-footer a {
-    color: #2563eb;
-    margin: 0 0.5rem;
-    text-decoration: none;
-}
-
-.footer-top p {
-    margin: 0.25rem 0;
-}
-
-.footer-links,
-.footer-social {
-    margin: 1rem 0;
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-}
-
-.footer-copy {
-    margin-top: 1rem;
-    font-size: 0.85rem;
-    color: #94a3b8;
-}
-
-/* ================= Contact Section ================= */
+/* =========================
+   Contact Section
+========================= */
 .contact-section {
     padding: 4rem 1.5rem;
     background-color: #f1f5f9;
-    color: #0f172a;
+    color: var(--color-primary);
 }
 
 .contact-content {
@@ -417,7 +371,6 @@ section {
     background-color: #1e40af;
 }
 
-/* ================= Sticky Contact Button ================= */
 .sticky-contact {
     position: fixed;
     bottom: 1.5rem;
@@ -429,6 +382,7 @@ section {
     font-weight: 600;
     text-decoration: none;
     z-index: 1000;
+
     transition: background-color 0.2s ease, transform 0.2s ease;
     outline: none;
     border: none;
@@ -443,7 +397,9 @@ section {
     box-shadow: none;
 }
 
-/* ================= Header ================= */
+/* =========================
+   Header & Footer
+========================= */
 .site-header {
     position: sticky;
     top: 0;
@@ -477,29 +433,39 @@ section {
     color: var(--color-primary);
 }
 
-@media (max-width: 480px) {
+@media(max-width: 480px) {
     .company-name {
         font-size: 1rem;
     }
 }
 
-/* ================= About Section ================= */
-.about {
-    background-color: #f1f5f9;
-    padding: 3rem 1.5rem;
-    color: var(--color-primary);
+.site-footer {
+    background-color: #0f172a;
+    color: #f1f5f9;
+    padding: 2rem 1.5rem;
+    text-align: center;
 }
 
-.about-content {
-    max-width: 800px;
-    margin: 0 auto;
+.site-footer a {
+    color: #2563eb;
+    margin: 0 0.5rem;
+    text-decoration: none;
+}
+
+.footer-top p {
+    margin: 0.25rem 0;
+}
+
+.footer-links,
+.footer-social {
+    margin: 1rem 0;
     display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
+    justify-content: center;
+    gap: 1rem;
 }
 
-.about-content p {
-    font-size: 1rem;
-    line-height: 1.6;
-    color: var(--color-primary);
+.footer-copy {
+    margin-top: 1rem;
+    font-size: 0.85rem;
+    color: #94a3b8;
 }
