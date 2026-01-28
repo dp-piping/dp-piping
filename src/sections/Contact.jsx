@@ -26,8 +26,10 @@ export default function Contact() {
           >
             {/* Hidden field for Netlify bot protection */}
             <input type="hidden" name="form-name" value="contact" />
-            <input type="text" name="name" placeholder="Your Name" required />
-            <input type="email" name="email" placeholder="Your Email" required />
+            <input type="text" name="name" placeholder="Name" required />
+            <input type="email" name="email" placeholder="Email Address" />
+            <input type="text" name="phone" placeholder="Phone Number" />
+            <input type="text" name="company" placeholder="Company" />
             <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
             <button type="submit" className="submit-button">
               Send Message
