@@ -4,8 +4,7 @@ export default function Gallery({ images }) {
             <div className="gallery-scroll">
                 {images.map((img, idx) => (
                     <div key={idx} className="gallery-item">
-                        <img src={img.src} alt={img.alt}
-                            style={img.rotate ? { transform: `rotate(${img.rotate}deg)` } : {}} />
+                        <img src={img.src} alt={img.alt} />
                     </div>
                 ))}
             </div>
